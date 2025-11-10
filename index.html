@@ -151,7 +151,9 @@
       let fakePercentage = Math.floor(Math.random() * 100);
       setTimeout(() => {
         progress.style.width = fakePercentage + "%";
-        percentageText.textContent = `Terdeteksi hasil AI sebesar ${fakePercentage}%`;
+        percentageText.innerHTML = `Terdeteksi hasil AI sebesar ${fakePercentage}%<br><small style="color:#facc15;">⚠️ AI bisa saja mendeteksi kesalahan.</small>`;
+
+        //percentageText.textContent = `Terdeteksi hasil AI sebesar ${fakePercentage}%`;
 
         if (fakePercentage >= 60) {
           statusText.innerHTML = "🚨 Video terindikasi hasil <span class='ai-detected'>AI-Generated</span>";
